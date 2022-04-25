@@ -35,6 +35,8 @@ model Bookmark {
     description String?
     link String
 
+    imagePath String?
+
     userId Int
     user User @relation(fields: [userId], references: [id])
 

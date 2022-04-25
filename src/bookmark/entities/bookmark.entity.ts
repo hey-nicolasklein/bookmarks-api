@@ -4,7 +4,6 @@ import { Exclude } from "class-transformer";
 
 export class BookmarkEntity implements Bookmark{
 
-    @Exclude()
     @ApiProperty()
     id: number;
 
@@ -24,8 +23,11 @@ export class BookmarkEntity implements Bookmark{
     link: string;
 
     @Exclude()
-    @ApiProperty()
     userId: number;
+
+    @ApiProperty()
+    imagePath: string;
+
 
     constructor(partial: Partial<BookmarkEntity>) {
         Object.assign(this, partial);
